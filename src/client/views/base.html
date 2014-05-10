@@ -1,0 +1,21 @@
+<template name="layout">
+  <header class="bar bar-nav">
+    {{> header}}
+  </header>
+  <div class="content">
+    <div class="proper-content">
+      {{> yield}}
+    </div>
+  </div>
+  <footer>
+    {{> footer}}
+  </footer>
+</template>
+
+<template name="header">
+  <h1 class="title">DnT</h1>
+</template>
+
+<template name="footer">
+</template>
+

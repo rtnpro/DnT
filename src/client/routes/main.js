@@ -1,15 +1,11 @@
 /* Routes */
 
-Router.configure({
-  layoutTemplate: 'layout'
-});
-
 Router.map(function () {
   this.route('index', {
     path: '/',
-      action: function () {
-        this.render('index');
-      }
+    action: function () {
+      this.render('index');
+    }
   });
 
   this.route('dummy', {
