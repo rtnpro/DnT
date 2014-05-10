@@ -3,10 +3,10 @@
 
     {{#each projects}}
       <li class="table-view-cell media">
-        <a class="navigate">
+        <a class="navigate" href="/project/{{ id }}/">
           <img class="media-object pull-left" width='100' height='125' src="images/Anne-Teubert600_758.jpg">
           <div class="media-body">
-              <h4><a href="{{website}}"> {{name}} </a>   &nbsp;&nbsp;&nbsp;<span class="icon icon-up" rid="{{_id}}"  id='upvote'>  &nbsp; {{ rank }} &nbsp; </span><span class="icon icon-down" id='downvote' rid="{{_id}}"></span></h4>
+              <h4><a href="#"> {{name}} </a>   &nbsp;&nbsp;&nbsp;<span class="icon icon-up" rid="{{_id}}"  id='upvote'>  &nbsp; {{ rank }} &nbsp; </span><span class="icon icon-down" id='downvote' rid="{{_id}}"></span></h4>
               <p>{{description}}</p>
               <p> Expected INR: {{total_funds}}, Received INR: {{donations}}</p>
           </div>
@@ -14,4 +14,48 @@
       </li>
     {{/each }}
 </ul>
+</template>
+
+<template name="project_details">
+  <div class="content-padded">
+    <div class="row">
+      <div class="col-md-2">
+        <img class="img-rounded glyphicon glyphicon-picture" src="/images/Anne-Teubert600_758.jpg" style="width: 140px; height: 140px;">
+      </div>
+      <div class="col-md-10">
+        <h1>{{ title }}</h1>
+        <p>{{ abstact }}</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <p><icon class="glyphicon glyphicon-calendar"></icon> <strong>Approval date</strong></p>
+            <p>{{ approval_date }}</p>
+          </div>
+          <div class="col-sm-6">
+            <p><icon class="glyphicon glyphicon-calendar"></icon> <strong>Closing date</strong></p>
+            <p>{{ closing_date }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <p><icon class="glyphicon glyphicon-usd"></icon> <strong>Total cost</strong></p>
+            <p>{{ total_cost }}</p>
+          </div>
+          <div class="col-sm-6">
+            <p><icon class="glyphicon glyphicon-usd"></icon> <strong>Commitment amount</strong></p>
+            <p>{{ commitment_amount }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <p><icon class="glyphicon glyphicon-stats"></icon> <strong>Status</strong></p>
+            <p>{{ status }}</p>
+          </div>
+          <div class="col-sm-6">
+            <p><icon class="glyphicon glyphicon-user"></icon> <strong>Team leader</strong></p>
+            <p>{{ team_leader }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

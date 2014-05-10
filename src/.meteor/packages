@@ -9,3 +9,5 @@ insecure
 iron-router
 ratchet
 accounts-ui
+chosen-package
+bootstrap-3

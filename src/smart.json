@@ -1,6 +1,8 @@
 {
   "packages": {
     "iron-router": {},
-    "ratchet": {}
+    "ratchet": {},
+    "chosen-package": {},
+    "bootstrap-3": {}
   }
 }
