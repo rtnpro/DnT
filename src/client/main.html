@@ -1,4 +1,26 @@
-<body>
-  <h1>Welcome to DnT</h1>
-</body>
+<template name="layout">
+  {{> header}}
+  <div class="content">
+    <div class="proper-content">
+      {{> yield}}
+    </div>
+  </div>
+  {{> footer}}
+</template>
 
+<template name="header">
+  <header class="bar bar-nav">
+    <h1 class="title">DnT</h1>
+  </header>
+</template>
+
+<template name="footer">
+</template>
+
+<template name="index">
+  <p class="content-padded">Welcome to DnT</p>
+</template>
+
+<template name="dummy">
+  <p class="content-padded">Hey, dummy!</p>
+</template>
