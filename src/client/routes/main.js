@@ -8,6 +8,13 @@ Router.map(function () {
     }
   });
 
+  this.route('project', {
+    path: '/project',
+    action: function () {
+      this.render('project');
+    }
+  });
+
   this.route('dummy', {
     path: '/dummy/',
     action: function () {
