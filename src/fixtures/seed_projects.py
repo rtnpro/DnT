@@ -17,7 +17,8 @@ projects = [
         'owner_user_id': '1',
         'owner_username': 'vireshas',
         'created': '09-05-2014',
-        'last_updated': ''
+        'last_updated': '',
+        'rank': 0
     },
     {
         'name': 'Pot Hole',
@@ -37,7 +38,8 @@ projects = [
         'owner_user_id': '1',
         'owner_username': 'vireshas',
         'created': '09-05-2014',
-        'last_updated': ''
+        'last_updated': '',
+        'rank': 0
     },
     {
         'name': 'Pot Hole',
@@ -57,7 +59,8 @@ projects = [
         'owner_user_id': '1',
         'owner_username': 'vireshas',
         'created': '09-05-2014',
-        'last_updated': ''
+        'last_updated': '',
+        'rank': 0
     },
     {
         'name': 'Pot Hole',
@@ -77,7 +80,8 @@ projects = [
         'owner_user_id': '1',
         'owner_username': 'vireshas',
         'created': '09-05-2014',
-        'last_updated': ''
+        'last_updated': '',
+        'rank': 0
     },
     {
         'name': 'Pot Hole',
@@ -97,7 +101,8 @@ projects = [
         'owner_user_id': '1',
         'owner_username': 'vireshas',
         'created': '09-05-2014',
-        'last_updated': ''
+        'last_updated': '',
+        'rank': 0
     },
     {
         'name': 'Pot Hole',
@@ -117,6 +122,7 @@ projects = [
         'owner_user_id': '1',
         'owner_username': 'vireshas',
         'created': '09-05-2014',
-        'last_updated': ''
+        'last_updated': '',
+        'rank': 0
     }
 ]

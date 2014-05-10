@@ -6,14 +6,21 @@ Template.project.helpers({
 
 Template.project.events({
     'click #upvote' : function(event){
-        target = event.target;
-        record_id = target.attr('rid')
+        var $target = $(event.target);
+        var record_id = $target.attr('rid');
         if(record_id){
             Projects.update(
-                {'_id':record_id},
-                {$set: {'rank': rank}});
+                {'_id': record_id},
+                {$inc: {'rank': 1}});
         }
     },
     'click #downvote' : function(event){
+        var $target = $(event.target);
+        var record_id = $target.attr('rid');
+        if(record_id){
+            Projects.update(
+                {'_id': record_id},
+                {$inc: {'rank': -1}});
+        }
     }
 })
