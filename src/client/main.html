@@ -2,6 +2,7 @@
   {{> header}}
   <div class="content">
     <div class="proper-content">
+  {{> temp}}
       {{> yield}}
     </div>
   </div>
@@ -19,6 +20,8 @@
 
 <template name="index">
   <p class="content-padded">Welcome to DnT</p>
+  Name: <input id="name" type='text'/>
+  Submit: <input type='submit' id='submit'/>
 </template>
 
 <template name="dummy">
