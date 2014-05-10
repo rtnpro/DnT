@@ -41,3 +41,46 @@ ProjectMilestones: {
 }
 */
 ProjectMilestones = new Meteor.Collection('project_milestones');
+
+
+/*
+  WorldBankProjects: {
+    id: String,
+    title: String,
+    status: String,
+    approval_date: Datetime,
+    closing_date: Datetime,
+    total_cost: float,
+    commitment_amount: float,
+    team_leader: String,
+    abstract: String
+  }
+*/
+
+WorldBankProjects = new Meteor.Collection('world_bank_projects');
+
+/*
+  WorldBankProjectProcurements: {
+    uniq_id: String,
+    url: String,
+    id: String,
+    title: String,
+    country: String,
+    notice_type: String,
+    notice_status: String,
+    method: String,
+    contact_award_type: String,
+    submission_deadline: Datetime,
+    published_date: Datetime,
+    contact_organization: String,
+    contact_name: String,
+    contact_address: String,
+    contact_city: String,
+    contact_postal_code: String,
+    contact_email: String,
+    contact_website: String,
+    geocode: Array [lat, long],
+  }
+*/
+WorldBankProjectProcurements = new Meteor.Collection('world_bank_project_procurements');
+
