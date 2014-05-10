@@ -12,12 +12,14 @@ function loadFixtures () {
   });
 }
 
-loadWorldBankFixtures () {
-  var projects = JSON.parse(Assets.getText('fixtures/world_bank_projects.json'));
+function loadWorldBankFixtures () {
+  var projects = JSON.parse(Assets.getText('fixtures/world_bank_projects.json'))['root']['page'];
   if (!WorldBankProjects.findOne()) {
     _.each(projects, function (index, elem) {
-      if (!WorldBankProject.findOne({id: elem.project_id})) {
-        WorldBankProject.insert({
+      console.log(elem);
+      elem = elem['entity']['product'];
+      if (!WorldBankProjects.findOne({id: elem.project_id})) {
+        WorldBankProjects.insert({
           id: elem.project_id,
           title: elem.project_title,
           status: elem.project_status,
@@ -29,6 +31,7 @@ loadWorldBankFixtures () {
           abstact: elem.project_abstract
         });
       }
+      console.log(elem);
       WorldBankProjectProcurements.insert({
         uniq_id: elem.uniq_id,
         url: elem.url,
@@ -49,7 +52,7 @@ loadWorldBankFixtures () {
         contact_postal_code: elem.contact_postal_code,
         contact_email: elem.contact_email,
         contact_website: elem.contact_website,
-        geocode: elem.geocode.split(', ')
+        geocode: elem.geocode? elem.geocode.split(', '): [null, null]
       });
     });
   }
@@ -59,5 +62,7 @@ Meteor.startup(function () {
   loadFixtures();
   try {
     loadWorldBankFixtures();
-  } catch (err) {}
+  } catch (err) {
+    console.log(err);
+  }
 });
